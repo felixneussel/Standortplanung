@@ -13,8 +13,20 @@ Finds a heuristic solution for the warehouse location problem. It prints a table
 
 - varCosts: 2d-list where varCosts[i,j] is the cost for transporting one unit from i to j.
 - fixCosts: List where fixCosts[i] marks the fix costs for opening a warehouse at location i.
-- potentialLocs: List of 1-based indeces of potential warehouse locations. 
+- potentialLocs: List of 1-based indices of potential warehouse locations. 
 
 ### Return
 
-- X: List of 1-based indeces of warehouse locations which are part of the heuristic solution. 
+- X: List of 1-based indices of warehouse locations which are part of the heuristic solution. 
+
+## `weiszfeld(vectors, weights,d)`
+
+Uses Weiszfeld's algorithm to approximate the solution of a 1-median-problem with euclidian metric.
+
+### Parameters
+
+- vectors: 2-d list with all locations on a plane.
+
+### Return
+
+- X: List of 1-based indices of warehouse locations which are part of the heuristic solution. 
