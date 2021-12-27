@@ -11,4 +11,10 @@ Finds a heuristic solution for the warehouse location problem. It prints a table
 
 ### Parameters
 
-- varCosts: Matrix where $c_ij$ is the cost for transporting one unit from $i$ to $j$ as 2d-list.
+- varCosts: 2d-list where varCosts[i,j] is the cost for transporting one unit from i to j.
+- fixCosts: List where fixCosts[i] marks the fix costs for opening a warehouse at location i.
+- potentialLocs: List of 1-based indeces of potential warehouse locations. 
+
+### Return
+
+- X: List of 1-based indeces of warehouse locations which are part of the heuristic solution. 
