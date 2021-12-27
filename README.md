@@ -1,0 +1,1 @@
+This was my very first Python project and I started learning Python by working on this project. This is why I didn't use numpy or practical built-ins. At this point, I only new the syntax. However, the implemented algorithms work.
