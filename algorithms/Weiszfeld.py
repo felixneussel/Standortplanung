@@ -10,10 +10,10 @@ e = [6,5]
 
 standorte = [a, b,c,d]
 
-wa = 6
-wb = 2
-wc = 7
-wd = 4
+wa = 10
+wb = 1
+wc = 1
+wd = 1
 we = 1
 
 gewichte = [wa, wb,wc,wd]
@@ -52,14 +52,12 @@ def dominance(vectors, weights):
 	for index in range(0,len(vectors)):
 		g = gamma(index,vectors,weights)
 		dominant = g <= weights[index]
-		operator = '>'
-		adj = ' nicht '
 		outputindex = index + 1
 		if(dominant):
-			output = True
-			operator = '<='
-			adj = ' '
-		print('Standort ' + str(outputindex) + ': Gamma = ' + str(g) + ' ' + operator + ' ' + str(weights[index]) + ' = w' + str(outputindex) + ', Dominanzkriterium' + adj + 'efuellt.')
+			print(f"Location {outputindex}: Gamma = {g} <= {weights[index]} = w, dominance criterion fulfilled.")
+			return vectors[index]
+		else:
+			print(f"Location {outputindex}: Gamma = {g} > {weights[index]} = w, dominance criterion not fulfilled.")
 	return output
 
 
@@ -106,8 +104,9 @@ def stop(point, nextpoint, vectors, weights, d):
 		return False
 
 def weiszfeld(vectors, weights,d):
-	if(dominance(vectors,weights)):
-		return 'Stop, da Dominanzkriterium erfuellt'
+	dom = dominance(vectors,weights)
+	if dom != False:
+		return dom
 	prePoint = initial(vectors, weights)
 	nextPoint = next(prePoint,vectors,weights)
 	counter = 0
