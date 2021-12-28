@@ -7,7 +7,7 @@ All algorithms can be used in the script main.py.
 
 ## `greedy(varCosts,fixCosts,potentialLocs)` 
 
-Finds a heuristic solution for the warehouse location problem. It prints a table with information in each iteration.
+Finds a heuristic solution for the warehouse location problem using the greedy heuristic. In each iteration, it prints a table with info on the iteration.
 
 ### Parameters
 
@@ -32,3 +32,19 @@ Uses Weiszfeld's algorithm to approximate the solution of a 1-median-problem wit
 ### Return
 
 - X: List of length two storing the x and y coordinate respectively of the median
+
+## `dualAscent(costMatrix,sj,I)`
+
+Finds a heuristic solution for dual problem of the warehouse location problem using the dual ascent method. In each iteration, it prints a table with info on the iteration.
+
+### Parameters
+
+- costMatrix: 2d-list where costMatrix[i,j] marks the cost for transporting one unit from i to j.
+- sj: List where sj[i] marks the fix costs for opening a warehouse at location i.
+- I: List of 1-based indices of potential warehouse locations. 
+
+### Return
+
+- v: solution of the dual problem of the WLP
+
+

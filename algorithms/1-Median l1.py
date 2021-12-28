@@ -38,22 +38,6 @@ def solve_l1(standorte):
     optimaler_standort = (x1,x2)
     print("Optimaler Standort:", optimaler_standort, ", Zielfunktionswert:", zielfunktion_l1(optimaler_standort, standorte) )
 
-#Funktion, die im Fall eines verbotenen Gebiets die den besten Kandidaten berechnet
-def restricted(kandidaten,kunden):
-    best = kandidaten[0]
-    bestVal = zielfunktion_l1(best,kunden)
-    for punkt in punkte:
-        result = zielfunktion_l1(punkt,kunden)
-        if(result < bestVal):
-            best = punkt
-            bestVal = result
-        print('punkt: ' + str(punkt) + ', Zielfunktion: ' + str(result))
-    print('')
-    print('Bester Standort: ' + str(best) + ', Zielfunktion: ' + str(bestVal))
-
-
-
-
 
 klausur = [(4,1,2200),(8,3,1800),(10,1,4500),(13,9,2500)]
 
