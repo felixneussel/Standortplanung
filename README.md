@@ -25,8 +25,10 @@ Uses Weiszfeld's algorithm to approximate the solution of a 1-median-problem wit
 
 ### Parameters
 
-- vectors: 2-d list with all locations on a plane.
+- vectors: List where each entry is a list of length two storing the x and y coordinate respectively of a location
+- weights: List where each entry marks the weight (importance) of the location at that index
+- d: Termination tolerance for optimality
 
 ### Return
 
-- X: List of 1-based indices of warehouse locations which are part of the heuristic solution. 
+- X: List of length two storing the x and y coordinate respectively of the median
