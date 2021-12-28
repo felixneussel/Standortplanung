@@ -31,6 +31,7 @@ algorithms/Weiszfeld Kopie.py
 algorithms/ElzingaHearn.py
 algorithms/1-Center l1 ungewichtet.py
 algorithms/1-Median l2-Quadrat.py
+algorithms/1-Median l2.py
    
 # Byte-compiled / optimized / DLL files
 __pycache__/
