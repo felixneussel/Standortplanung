@@ -33,7 +33,7 @@ def dualAscent(costMatrix,sj,I):
         print('J : ' + str(J))
         print('I : ' + str(I))
         iterationCounter += 1
-    return (sj,v,J)
+    return v
 
 #Berechnet eine Iteration von Dual Ascent für gegebene Kostenmatrix, sj, vi und Indexmenge I
 def dualAscentIteration(costMatrix,sj,v,J,I):

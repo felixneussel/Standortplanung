@@ -21,7 +21,7 @@ Finds a heuristic solution for the warehouse location problem. It prints a table
 
 ## `weiszfeld(vectors, weights,d)`
 
-Uses Weiszfeld's algorithm to approximate the solution of a 1-median-problem with euclidian metric.
+Uses Weiszfeld's algorithm to approximate the solution of a 1-median-problem with euclidian metric on a 2-d plane. Prints information on dominace criterion of each location and every iteration.
 
 ### Parameters
 
