@@ -14,8 +14,8 @@ def solve_l1(standorte):
     # ueberpruefen, ob Dominanzkriterium bereits fuer einen Stadort erfuellt ist:
     for s in standorte:
         if s[2] >= summe_gewichte/2:
-            print("optimaler Standort (Dominanz):", s, ", Zielfunktionswert:", zielfunktion_l1(s, standorte))
-            return
+            print("Optimal Location (Dominance criterion):", s, ", Objective value:", zielfunktion_l1(s, standorte))
+            return s
 
     summe_x1 = 0
     standorte.sort()
@@ -36,12 +36,13 @@ def solve_l1(standorte):
             break
     
     optimaler_standort = (x1,x2)
-    print("Optimaler Standort:", optimaler_standort, ", Zielfunktionswert:", zielfunktion_l1(optimaler_standort, standorte) )
+    print("Optimal Location:", optimaler_standort, ", Objective function:", zielfunktion_l1(optimaler_standort, standorte) )
+    return optimaler_standort
 
 
 klausur = [(4,1,2200),(8,3,1800),(10,1,4500),(13,9,2500)]
 
-solve_l1(klausur)
+print(solve_l1(klausur))
 
 
 
