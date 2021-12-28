@@ -17,7 +17,7 @@ Finds a heuristic solution for the warehouse location problem using the greedy h
 
 ### Return
 
-- X: List of 1-based indices of warehouse locations which are part of the heuristic solution. 
+- List of 1-based indices of warehouse locations which are part of the heuristic solution. 
 
 ## `weiszfeld(vectors, weights,d)`
 
@@ -31,7 +31,7 @@ Uses Weiszfeld's algorithm to approximate the solution of a 1-median-problem wit
 
 ### Return
 
-- X: List of length two storing the x and y coordinate respectively of the median
+- List of length two storing the x and y coordinate respectively of the median
 
 ## `dualAscent(costMatrix,sj,I)`
 
@@ -45,6 +45,18 @@ Finds a heuristic solution for dual problem of the warehouse location problem us
 
 ### Return
 
-- v: solution of the dual problem of the WLP
+- solution of the dual problem of the WLP
+
+## `median_l1(locations)`
+
+Finds the solution of a 1-median-problem with Manhattan metric on a 2-d plane.
+
+### Parameters
+
+- locations: List of 3-tuples storing the x coordinate, y coordinate and weight (importance) of a location.
+
+### Return
+
+- List of length two storing the x coordinate and y coordinate of the median
 
 

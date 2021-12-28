@@ -4,45 +4,45 @@ def zielfunktion_l1(kandidat, kunden):
         summe += abs(k[0]-kandidat[0])*k[2]*2 + abs(k[1]-kandidat[1])*k[2]*2
     return summe
 
-def solve_l1(standorte):
+def median_l1(locations):
     """Loest ein 1-Medianproblem mit l1-Metrik fuer eine Liste 
     von Kundenstandorten ('standorte'), die in der Form (x1, x2, w) gegeben sind."""
     summe_gewichte = 0
-    for s in standorte:
+    for s in locations:
         summe_gewichte += s[2]
     
     # ueberpruefen, ob Dominanzkriterium bereits fuer einen Stadort erfuellt ist:
-    for s in standorte:
+    for s in locations:
         if s[2] >= summe_gewichte/2:
-            print("Optimal Location (Dominance criterion):", s, ", Objective value:", zielfunktion_l1(s, standorte))
+            print("Optimal Location (Dominance criterion):", s, ", Objective value:", zielfunktion_l1(s, locations))
             return s
 
     summe_x1 = 0
-    standorte.sort()
+    locations.sort()
     x1 = 0
-    for s in standorte:
+    for s in locations:
         summe_x1 += s[2]
         if summe_x1 >= summe_gewichte/2:
             x1 = s[0]
             break
 
     summe_x2 = 0
-    standorte.sort(key=lambda a: a[1])
+    locations.sort(key=lambda a: a[1])
     x2 = 0
-    for s in standorte:
+    for s in locations:
         summe_x2 += s[2]
         if summe_x2 >= summe_gewichte/2:
             x2 = s[1]
             break
     
     optimaler_standort = (x1,x2)
-    print("Optimal Location:", optimaler_standort, ", Objective function:", zielfunktion_l1(optimaler_standort, standorte) )
+    print("Optimal Location:", optimaler_standort, ", Objective function:", zielfunktion_l1(optimaler_standort, locations) )
     return optimaler_standort
 
 
 klausur = [(4,1,2200),(8,3,1800),(10,1,4500),(13,9,2500)]
 
-print(solve_l1(klausur))
+print(median_l1(klausur))
 
 
 
